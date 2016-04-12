@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
+        id="com.example.plugin.CustomPrint"
+        version="0.7.0">
+
+  <name>Hello</name>
+
+  <engines>
+    <engine name="cordova" version=">=3.4.0"/>
+  </engines>
+
+  <asset src="www/customPrint.js" target="js/customPrint.js"/>
+
+  <js-module src="www/customPrint.js" name="customPrint">
+    <clobbers target="customPrint" />
+  </js-module>
+
+  <platform name="android">
+
+    <config-file target="res/xml/config.xml" parent="/*">
+      <feature name="CustomPrint">
+        <param name="android-package" value="com.example.plugin.CustomPrint"/>
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+
+
+    <config-file target="AndroidManifest.xml" parent="/manifest/application/activity">
+
+      <intent-filter>
+        <action android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" />
+      </intent-filter>
+      <meta-data android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" android:resource="@xml/device_filter" />
+
+  </config-file>
+
+    <source-file src="src/android/CustomPrint.java" target-dir="src/com/example/plugin/"/>
+    <source-file src="src/android/customandroidapi.jar" target-dir="libs"/>
+    <source-file src="src/android/device_filter.xml" target-dir="res/xml"/>
+  </platform>
+
+</plugin>
