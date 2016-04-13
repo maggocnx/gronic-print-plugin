@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <plugin xmlns="http://www.phonegap.com/ns/plugins/1.0"
-        id="com.example.plugin.CustomPrint"
+        id="com.gronic.plugin.customPrint"
         version="0.7.0">
 
-  <name>Hello</name>
+  <name>GronicCustomPrint</name>
 
   <engines>
     <engine name="cordova" version=">=3.4.0"/>
@@ -32,7 +32,7 @@
       </intent-filter>
       <meta-data android:name="android.hardware.usb.action.USB_DEVICE_ATTACHED" android:resource="@xml/device_filter" />
 
-  </config-file>
+    </config-file>
 
     <source-file src="src/android/CustomPrint.java" target-dir="src/com/example/plugin/"/>
     <source-file src="src/android/customandroidapi.jar" target-dir="libs"/>
