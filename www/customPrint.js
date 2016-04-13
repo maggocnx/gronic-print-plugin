@@ -1,5 +1,5 @@
-cordova.define("com.example.plugin.CustomPrint.customPrint", function(require, exports, module) {
 /*global cordova, module*/
+cordova.define("com.example.plugin.CustomPrint.customPrint", function(require, exports, module) {
 
     module.exports = {
         print: function (data, successCallback, errorCallback) {
