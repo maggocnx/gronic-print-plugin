@@ -1,4 +1,4 @@
-package com.example.plugin;
+package com.gronic.plugin;
 
 import it.custom.printer.api.android.*;
 

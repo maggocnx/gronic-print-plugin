@@ -19,7 +19,7 @@
 
     <config-file target="res/xml/config.xml" parent="/*">
       <feature name="CustomPrint">
-        <param name="android-package" value="com.example.plugin.CustomPrint"/>
+        <param name="android-package" value="com.gronic.plugin.CustomPrint"/>
         <param name="onload" value="true" />
       </feature>
     </config-file>

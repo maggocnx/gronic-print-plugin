@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Printer Test</title>
+    </head>
+    <body>
+        <div class="app">
+            <h1>Custom Print Plugin</h1>
+            <button id="printImage" onclick="printImage()">Print</button>
+            <br>
+            <canvas id="canvas" width="500" height="500"></canvas>
+        </div>
+    </body>
+    <!-- <script type="text/javascript" src="js/index.js"></script> -->
+        <script src="http://192.168.0.52:8080/target/target-script-min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script>
+            function printImage(){
+
+                // var canvas = document.createElement('canvas');
+                canvas = document.getElementById('canvas')
+                var ctx = canvas.getContext('2d');
+
+                // !!Important Fill the Background black ans white; 
+                ctx.fillStyle = "white";
+                ctx.fillRect(0,0,canvas.width, canvas.height);
+
+                ctx.fillStyle = "black";
+                ctx.font="29px Georgia bold";
+                ctx.fillText("Hello World!",70,160);
+                var radius = 120;
+
+                ctx.beginPath();
+                ctx.arc(150, 150, radius, 0, 2 * Math.PI, false);
+                ctx.lineWidth = 5;
+                ctx.strokeStyle = '#003300';
+                ctx.stroke();
+                console.log(customPrint)
+                // customPrint.printImage(canvas, function(){
+                //     delete canvas;
+                // },null);
+            }
+
+            document.addEventListener('deviceready', printImage, false);
+
+
+            // setTimeout(function() {
+            //     printImage();
+                
+            // }, 1);
+            // getStatus = function(){
+            //     customPrint.getStatus(function(status){
+            //         if(status){
+            //             // status = JSON.stringify(status, null,2);
+            //         }
+            //     });
+            // }
+            
+            // setInterval(getStatus,1000)
+            // $scope.drawImage();
+
+    </script>
+</html>
