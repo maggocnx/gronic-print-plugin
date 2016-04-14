@@ -2,10 +2,6 @@
 
 
 ## Using
-Clone the plugin
-
-    $ git clone https://github.com/don/cordova-plugin-hello.git
-
 Create a new Cordova Project
 
     $ cordova create hello com.example.helloapp Hello
@@ -13,11 +9,11 @@ Create a new Cordova Project
 Install the plugin
 
     $ cd hello
-    $ cordova plugin add ../cordova-plugin-hello
+    $ cordova plugin add https://github.com/maggocnx/gronic-print-plugin.git
     
     cordova platform add android
     
 Run the code
 
-    cordova run 
+    cordova run android
 
