@@ -1,0 +1,31 @@
+{
+  "name": "GronicCustomPrint",
+  "version": "0.7.0",
+  "description": "Plugin for printing on Custom Printer ",
+  "cordova": {
+    "id": "com.gronic.plugin.customPrint",
+    "platforms": [
+      "android"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maggocnx/gronic-print-plugin.git"
+  },
+  "keywords": [
+    "ecosystem:cordova",
+    "cordova-android"
+  ],
+  "engines": [
+    {
+      "name": "cordova",
+      "version": ">=3.4.0"
+    }
+  ],
+  "author": "Marco Grieb",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/maggocnx/gronic-print-plugin/issues"
+  },
+  "homepage": "https://github.com/maggocnx/gronic-print-plugin#readme"
+}
